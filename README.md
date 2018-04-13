@@ -7,7 +7,7 @@ https://blog.csdn.net/changjiale110/article/details/76145585
 
 拉到最后， 我们看到了我们看到 request headers内的信息 我门拉取其中2个使用 user-agent: 和 accept:
 
-#储存一个list
+# 储存一个list
 使用pickle，将列表储存在文件中:
 import pickle
 my_list = ['Fred', 73, 'Hello there', 81.9876e-13]
