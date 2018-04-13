@@ -15,7 +15,7 @@ import pickle
 
 my_list = ['Fred', 73, 'Hello there', 81.9876e-13]
 
-pickle_file = open('my_pickled_list.pkl', '* wb *')
+pickle_file = open('my_pickled_list.pkl', 'wb')
 
 pickle.dump(my_list, pickle_file)
 
@@ -27,7 +27,7 @@ pickle_file.close()
 
 import pickle
 
-pickle_file = open('my_pickled_list.pkl', '*rb*')
+pickle_file = open('my_pickled_list.pkl', 'rb')
 
 recovered_list = pickled.load(pickle_file)
 
