@@ -7,6 +7,23 @@ https://blog.csdn.net/changjiale110/article/details/76145585
 
 拉到最后， 我们看到了我们看到 request headers内的信息 我门拉取其中2个使用 user-agent: 和 accept:
 
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+
+Accept-Encoding: gzip, deflate, br
+
+Accept-Language: zh-CN,zh;q=0.9,ja;q=0.8,it;q=0.7,en;q=0.6
+
+Cache-Control: max-age=0
+
+Connection: keep-alive
+
+Host: www.zhihu.com
+
+Upgrade-Insecure-Requests: 1
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+
+
 # 储存一个list
 
 使用pickle，将列表储存在文件中:
