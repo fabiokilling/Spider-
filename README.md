@@ -37,4 +37,4 @@ print(recovered_list)
 
 # (上面"w"和"r"后都加了b，因为pickle存储方式默认是二进制方式,不用二进制方式打开就会报错，所以后面加上"b")
 # (TypeError: write() argument must be str, not bytes)
-
+(这是py2和py3的区别)
