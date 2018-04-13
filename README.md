@@ -58,3 +58,7 @@ print(recovered_list)
 
 # 写一个简单的分布式知乎爬虫
 https://www.jianshu.com/p/a2a07ed07161
+
+
+# 记一次分布式B站爬虫任务系统的完整设计和实施
+https://www.cnblogs.com/printhelloworld/p/6944343.html
