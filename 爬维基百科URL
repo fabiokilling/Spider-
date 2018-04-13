@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 11 15:54:05 2018
+
+@author: ArcherX
+"""
+from urllib import request
+#导入bs4模块
+from bs4 import BeautifulSoup as sp
+#引用re方法
+import re
+# 维基百科url
+url = "https://en.wikipedia.org/wiki/Main_Page"
+#在浏览器下获取他们的headers信息
+header = {'User-Agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko)Chrome/65.0.3325.181 Safari/537.36",
+          "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"}
+
+req = request.Request(url, headers=header)
+#打开并读取url内信息
+html = request.urlopen(req).read()
+#利用bs4库解析html
+soup = sp(html, "html.parser")
+#需要爬取的信息在网页的 a 标签中， 所以去抓取所有的a标签
+listall = soup.find_all("a", href = re.compile("^/wiki/"))
+for list in listall:
+    if not re.search("\.(jpg|JPG)$", list["href"]):
+        print(list.get_text(),"------>","http://en.wikipedia.org"+list["href"])
+    
+    
