@@ -62,3 +62,28 @@ https://www.jianshu.com/p/a2a07ed07161
 
 # 记一次分布式B站爬虫任务系统的完整设计和实施
 https://www.cnblogs.com/printhelloworld/p/6944343.html
+
+
+# AttributeError: 'module' object has no attribute 'urlopen'
+
+import urllib.request
+
+url = 'http://www.baidu.com/'
+
+html = urllib.request.urlopen(url).read()
+
+print(html)
+
+urllib库中属性不存在urlopen
+
+AttributeError: 'module' object has no attribute 'urlopen'
+
+官方3.0版本已经把urllib2,urlparse等五个模块都并入了urllib中，也就是整合了。
+
+import urllib.request 
+
+url="http://www.baidu.com"
+
+get=urllib.request.urlopen(url).read() 
+
+print(get)
