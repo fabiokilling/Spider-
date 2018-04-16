@@ -65,6 +65,16 @@ https://www.cnblogs.com/printhelloworld/p/6944343.html
 
 
 # AttributeError: 'module' object has no attribute 'urlopen'
+(Python2用法)
+import urllib2  
+
+response = urllib2.urlopen('http://www.baidu.com/')  
+
+html = response.read()  
+
+print html  
+
+(Python3用法)
 
 import urllib.request
 
