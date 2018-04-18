@@ -6,35 +6,30 @@ python爬虫涉及的库：
 
 请求库，解析库，存储库，工具库
 
- 
+## 1. 请求库：urllib/re/requests
 
-1. 请求库：urllib/re/requests
-
-（1） urllib/re是python默认自带的库，可以通过以下命令进行验证：
+### （1） urllib/re是python默认自带的库，可以通过以下命令进行验证：
 
 import urllib, re
 
 没有报错信息输出，说明环境正常
+### （2） requests安装
 
- 
-
-（2） requests安装
-
-2.1 打开CMD，输入
+#### 2.1 打开CMD，输入
 
 pip3 install requests
 
-2.2 等待安装后，验证
+#### 2.2 等待安装后，验证
 
 import requests
 
-（3） selenium安装（驱动浏览器进行网站访问行为）
+### （3） selenium安装（驱动浏览器进行网站访问行为）
 
-3.1 打开CMD，输入
+#### 3.1 打开CMD，输入
 
 pip3 install selenium
 
-3.2 安装chromedriver
+#### 3.2 安装chromedriver
 
 网址：https://npm.taobao.org/
 
@@ -42,7 +37,7 @@ pip3 install selenium
 
 这个路径只要在PATH变量中就可以
 
-3.3 等待安装完成后，验证
+#### 3.3 等待安装完成后，验证
 
 import selenium
 
@@ -50,7 +45,7 @@ from selenium import webdriver
 
 回车后弹出chrome浏览器界面
 
-3.4 安装其他浏览器(已经没用了)
+#### 3.4 安装其他浏览器(已经没用了)
 
 无界面浏览器phantomjs
 
@@ -68,8 +63,6 @@ console.log('phantomjs')
 
 CTRL+C
 
-
-
 python
 
 from selenium import webdriver
@@ -82,9 +75,9 @@ driver.page_source
 
  
 
-2. 解析库：
+## 2. 解析库：
 
-2.1 lxml (XPATH)
+#### 2.1 lxml (XPATH)
 
 打开CMD
 
@@ -94,8 +87,7 @@ pip3 install lxml
 
 pip3 install 文件名.whl
  
-
-2.2 beautifulsoup
+#### 2.2 beautifulsoup
 
 打开CMD，需要先安装好lxml
 
@@ -108,7 +100,7 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup('<html></html>','lxml')
  
 
-2.3 pyquery（类似jquery语法）
+#### 2.3 pyquery（类似jquery语法）
 
 打开CMD
 
@@ -129,9 +121,9 @@ result
 
  
 
-3. 存储库
+## 3. 存储库
 
-3.1 pymysql（操作MySQL，关系型数据库）
+#### 3.1 pymysql（操作MySQL，关系型数据库）
 
 安装：
 
@@ -157,13 +149,7 @@ cursor.fetchone()
 
 查看mysql里的db，数据浏览器，发现一致
 
-
-
- 
-
- 
-
-3.2 pymongo（操作MongoDB，key-value）
+#### 3.2 pymongo（操作MongoDB，key-value）
 
 安装
 
@@ -183,7 +169,7 @@ db['table'].find_one({'name':'bob'})
 
  
 
-3.3 redis（分布式爬虫，维护爬取队列）
+#### 3.3 redis（分布式爬虫，维护爬取队列）
 
 安装：
 
@@ -205,23 +191,23 @@ r.get('name')
 
  
 
-4.工具库
+## 4.工具库
 
-4.1 flask（WEB库）
+#### 4.1 flask（WEB库）
 
 pip3 install flask
 
 
  
 
-4.2 Django（分布式爬虫维护系统）
+#### 4.2 Django（分布式爬虫维护系统）
 
  
 
 pip3 install django
  
 
-4.3 jupyter（运行在网页端的记事本，支持markdown，可以在网页上运行代码）
+#### 4.3 jupyter（运行在网页端的记事本，支持markdown，可以在网页上运行代码）
 
 pip3 install jupyter
  
