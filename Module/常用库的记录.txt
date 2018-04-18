@@ -23,3 +23,9 @@ pyquery(网页解析库)
 一些存储库
 pymysql（操作MySQL数据库的一个库，完成数据库的交互操作)
 pymongo(操作MongoDB的数据库，MongoDB是非关系型数据库，存储数据不需要建表,不需要关心表的结构，可以动态增加键名，方便的完成数据存储)
+redis(分布式爬虫维护爬取队列，运行效率高)(ConnectionError: Error 10061 connecting to localhost:6379. 由于目标计算机积极拒绝，无法连接。)
+(解决方法:开启Redis服务)
+
+flask(web库，做代理的设置的时候要用到，代理的获取代理的存储的接口)http://docs.jinkan.org/docs/flask/
+django(web服务器框架，提供完整的后台管理，模板引擎，接口，路由，做一个完整的网站，做一个管理系统来维护分布式爬虫的主机信息)
+jupyter(可以在网页上运行代码,可以在网页直接创建记事本，代码块和Markdown块，支持打印)
