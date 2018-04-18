@@ -1,9 +1,6 @@
 # python爬虫相关库安装
-
 https://www.cnblogs.com/copywang/p/7832527.html
-
 python爬虫涉及的库：
-
 请求库，解析库，存储库，工具库
 
 ## A. 请求库：urllib/re/requests
@@ -216,7 +213,6 @@ pip3 install jupyter
 打开CMD
 
 jupyter notebook
-
 
 之后就可以在网页直接创建记事本，代码块和Markdown块，支持打印
 
