@@ -113,3 +113,29 @@ driver = webdriver.Chrome()
 # 如果这里提示找不到指定的文件，是因为Chromedriver没有安装
 
 
+\UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+
+使用Selenium要用PhantomJS来进行无界面模式的自动化测试，或者爬取某些动态页面
+
+但是从某版本开始Selenium不支持PhantomJs，请使用headless模式
+Chrome
+
+from selenium import webdriver
+
+options=webdriver.ChromeOptions()
+
+options.set_headless()
+
+# options.add_argument(‘--headless‘)
+
+options.add_argument(‘--disable-gpu‘)    # 关闭GPU加速
+
+driver=webdriver.Chrome(options=options)
+
+driver.get(‘http://httpbin.org/user-agent‘)
+
+driver.get_screenshot_as_file(‘test.png‘)
+
+driver.close()
+
+http://www.mamicode.com/info-detail-2193163.html
