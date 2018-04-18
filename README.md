@@ -110,6 +110,6 @@ from selenium import webdriver
 
 driver = webdriver.Chrome()
 
-# 如果这里提示找不到指定的文件，是因为Chrromedriver没有安装
+# 如果这里提示找不到指定的文件，是因为Chromedriver没有安装
 
 
