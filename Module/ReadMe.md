@@ -6,14 +6,14 @@ python爬虫涉及的库：
 
 请求库，解析库，存储库，工具库
 
-## 1. 请求库：urllib/re/requests
+## A. 请求库：urllib/re/requests
 
-### A. urllib/re是python默认自带的库，可以通过以下命令进行验证：
+### 1. urllib/re是python默认自带的库，可以通过以下命令进行验证：
 
 import urllib, re
 
 没有报错信息输出，说明环境正常
-### B. requests安装
+### 2. requests安装
 
 #### 2.1 打开CMD，输入
 
@@ -23,7 +23,7 @@ pip3 install requests
 
 import requests
 
-### C. selenium安装（驱动浏览器进行网站访问行为）
+### 3. selenium安装（驱动浏览器进行网站访问行为）
 
 #### 3.1 打开CMD，输入
 
@@ -75,9 +75,9 @@ driver.page_source
 
  
 
-## 2. 解析库：
+## B. 解析库：
 
-### A. lxml (XPATH)
+### 1. lxml (XPATH)
 
 打开CMD
 
@@ -87,7 +87,7 @@ pip3 install lxml
 
 pip3 install 文件名.whl
  
-### B. beautifulsoup
+### 2. beautifulsoup
 
 打开CMD，需要先安装好lxml
 
@@ -100,7 +100,7 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup('<html></html>','lxml')
  
 
-### C. pyquery（类似jquery语法）
+### 3. pyquery（类似jquery语法）
 
 打开CMD
 
@@ -121,9 +121,9 @@ result
 
  
 
-## 3. 存储库
+## C. 存储库
 
-### A. pymysql（操作MySQL，关系型数据库）
+### 1. pymysql（操作MySQL，关系型数据库）
 
 安装：
 
@@ -149,7 +149,7 @@ cursor.fetchone()
 
 查看mysql里的db，数据浏览器，发现一致
 
-#### 3.2 pymongo（操作MongoDB，key-value）
+### 2. pymongo（操作MongoDB，key-value）
 
 安装
 
@@ -169,7 +169,7 @@ db['table'].find_one({'name':'bob'})
 
  
 
-### B. redis（分布式爬虫，维护爬取队列）
+### 3. redis（分布式爬虫，维护爬取队列）
 
 安装：
 
@@ -191,23 +191,23 @@ r.get('name')
 
  
 
-## 4.工具库
+## D.工具库
 
-### A. flask（WEB库）
+### 1. flask（WEB库）
 
 pip3 install flask
 
 
  
 
-### B. Django（分布式爬虫维护系统）
+### 2. Django（分布式爬虫维护系统）
 
  
 
 pip3 install django
  
 
-### C. jupyter（运行在网页端的记事本，支持markdown，可以在网页上运行代码）
+### 3. jupyter（运行在网页端的记事本，支持markdown，可以在网页上运行代码）
 
 pip3 install jupyter
  
