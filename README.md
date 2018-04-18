@@ -1,7 +1,8 @@
 # Spider-
-# 记录爬虫
-https://blog.csdn.net/changjiale110/article/details/76145585 
 
+## 记录爬虫
+
+https://blog.csdn.net/changjiale110/article/details/76145585 
 
 爬虫获取headers作为代理 用浏览器打开需要url ，点击f12或右键检查（chrome） 点击 network –> Doc 点击f5 获取内容
 
@@ -23,8 +24,7 @@ Upgrade-Insecure-Requests: 1
 
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
 
-
-# 储存一个list
+## 储存一个list
 
 使用pickle，将列表储存在文件中:
 
@@ -38,7 +38,7 @@ pickle.dump(my_list, pickle_file)
 
 pickle_file.close()
 
-# 还原
+## 还原
 
 使用load(),为这个函数提供一个文件对象(对应包含被pickle了的文件)，它会按照原来的格式返回数据：
 
@@ -52,20 +52,23 @@ pickle_file.close()
 
 print(recovered_list)
 
-# (上面"w"和"r"后都加了b，因为pickle存储方式默认是二进制方式,不用二进制方式打开就会报错，所以后面加上"b")
-# (TypeError: write() argument must be str, not bytes)
+(上面"w"和"r"后都加了b，因为pickle存储方式默认是二进制方式,不用二进制方式打开就会报错，所以后面加上"b")
+
+(TypeError: write() argument must be str, not bytes)
+
 (这是py2和py3的区别)
 
-# 写一个简单的分布式知乎爬虫
+## 写一个简单的分布式知乎爬虫
+
 https://www.jianshu.com/p/a2a07ed07161
 
+## 记一次分布式B站爬虫任务系统的完整设计和实施
 
-# 记一次分布式B站爬虫任务系统的完整设计和实施
 https://www.cnblogs.com/printhelloworld/p/6944343.html
 
+## AttributeError: 'module' object has no attribute 'urlopen'
 
-# AttributeError: 'module' object has no attribute 'urlopen'
-(Python2用法)
+### (Python2用法)
 
 import urllib2  
 
@@ -75,7 +78,7 @@ html = response.read()
 
 print html  
 
-(Python3用法)
+### (Python3用法)
 
 import urllib.request
 
@@ -99,10 +102,9 @@ get=urllib.request.urlopen(url).read()
 
 print(get)
 
+## selenium
 
-
-
-# selenium(驱动浏览器，自动化测试，js渲染的网页无法用requests请求去正常去获取请求内容，selenium能驱动浏览器去执行js渲染，得到渲染后的页面，拿到js渲染后的内容)
+(驱动浏览器，自动化测试，js渲染的网页无法用requests请求去正常去获取请求内容，selenium能驱动浏览器去执行js渲染，得到渲染后的页面，拿到js渲染后的内容)
 
 import selenium
 
@@ -110,15 +112,15 @@ from selenium import webdriver
 
 driver = webdriver.Chrome()
 
-# 如果这里提示找不到指定的文件，是因为Chromedriver没有安装
+(如果这里提示找不到指定的文件，是因为Chromedriver没有安装)
 
-
-\UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
 
 使用Selenium要用PhantomJS来进行无界面模式的自动化测试，或者爬取某些动态页面
 
 但是从某版本开始Selenium不支持PhantomJs，请使用headless模式
-Chrome
+
+### Chrome
 
 from selenium import webdriver
 
@@ -126,9 +128,19 @@ options=webdriver.ChromeOptions()
 
 options.set_headless()
 
-# options.add_argument(‘--headless‘)
+'''
 
-options.add_argument(‘--disable-gpu‘)    # 关闭GPU加速
+options.add_argument(‘--headless‘)
+
+'''
+
+options.add_argument(‘--disable-gpu‘)    
+
+'''
+
+关闭GPU加速
+
+'''
 
 driver=webdriver.Chrome(options=options)
 
