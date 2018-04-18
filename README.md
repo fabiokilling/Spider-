@@ -98,3 +98,14 @@ url="http://www.baidu.com"
 get=urllib.request.urlopen(url).read() 
 
 print(get)
+
+
+
+
+# selenium(驱动浏览器，自动化测试，js渲染的网页无法用requests请求去正常去获取请求内容，selenium能驱动浏览器去执行js渲染，得到渲染后的页面，拿到js渲染后的内容)
+import selenium
+from selenium import webdriver
+driver = webdriver.Chrome()
+# 如果这里提示找不到指定的文件，是因为Chrromedriver没有安装
+
+
