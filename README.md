@@ -66,7 +66,9 @@ https://www.jianshu.com/p/a2a07ed07161
 
 https://www.cnblogs.com/printhelloworld/p/6944343.html
 
-## AttributeError: 'module' object has no attribute 'urlopen'
+## 出现报错
+
+(AttributeError: 'module' object has no attribute 'urlopen')
 
 ### (Python2用法)
 
@@ -88,11 +90,15 @@ html = urllib.request.urlopen(url).read()
 
 print(html)
 
+'''
+
 urllib库中属性不存在urlopen
 
 AttributeError: 'module' object has no attribute 'urlopen'
 
 官方3.0版本已经把urllib2,urlparse等五个模块都并入了urllib中，也就是整合了。
+
+'''
 
 import urllib.request 
 
@@ -150,4 +156,4 @@ driver.get_screenshot_as_file(‘test.png‘)
 
 driver.close()
 
-http://www.mamicode.com/info-detail-2193163.html
+不支持PhantomJs后处理方法的详情http://www.mamicode.com/info-detail-2193163.html
