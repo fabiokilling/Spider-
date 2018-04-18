@@ -1,6 +1,9 @@
 # python爬虫相关库安装
+
 https://www.cnblogs.com/copywang/p/7832527.html
+
 python爬虫涉及的库：
+
 请求库，解析库，存储库，工具库
 
 ## A. 请求库：urllib/re/requests
@@ -10,6 +13,7 @@ python爬虫涉及的库：
 import urllib, re
 
 没有报错信息输出，说明环境正常
+
 ### 2. requests安装
 
 #### 2.1 打开CMD，输入
@@ -70,8 +74,6 @@ dirver.get('http://www.baidu.com')
 
 driver.page_source
 
- 
-
 ## B. 解析库：
 
 ### 1. lxml (XPATH)
@@ -96,7 +98,6 @@ from bs4 import BeautifulSoup
 
 soup = BeautifulSoup('<html></html>','lxml')
  
-
 ### 3. pyquery（类似jquery语法）
 
 打开CMD
@@ -114,9 +115,6 @@ doc = pq('<html>hi</html>')
 result = doc('html').text()
 
 result
-
-
- 
 
 ## C. 存储库
 
@@ -138,9 +136,7 @@ cursor = conn.cursor()
 
 cursor.execute('select * from db')
 
-
 cursor.fetchone()
-
 
 打开MySQL-Fronty里连接到localhost
 
@@ -164,8 +160,6 @@ db['table'].insert({'name':'bob'})
 
 db['table'].find_one({'name':'bob'})
 
- 
-
 ### 3. redis（分布式爬虫，维护爬取队列）
 
 安装：
@@ -180,13 +174,7 @@ r = redis.Redis('localhost',6379)
 
 r.set('name','Bob')
 
-
 r.get('name')
-
-
-
-
- 
 
 ## D.工具库
 
@@ -194,21 +182,15 @@ r.get('name')
 
 pip3 install flask
 
-
- 
-
 ### 2. Django（分布式爬虫维护系统）
-
- 
 
 pip3 install django
  
-
 ### 3. jupyter（运行在网页端的记事本，支持markdown，可以在网页上运行代码）
 
 pip3 install jupyter
  
- 验证：
+验证：
 
 打开CMD
 
