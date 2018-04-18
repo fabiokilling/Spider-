@@ -1,0 +1,25 @@
+urllib
+re
+requests
+pip
+wheel
+selenium
+chromedriver(不是模块)(使用headless)
+( # from selenium import webdriver // driver = webdriver.Chrome() // driver.get('http://www.baidu.com') // driver.page_source )
+'''
+from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.set_headless()
+driver = webdriver.Chrome(options=options)
+#至此已完成
+driver.get('http://www.baidu.com')
+driver.page_source
+'''
+lxml
+bs4(BeautifulSoup)
+pyquery(网页解析库)
+
+
+一些存储库
+pymysql（操作MySQL数据库的一个库，完成数据库的交互操作)
+pymongo(操作MongoDB的数据库，MongoDB是非关系型数据库，存储数据不需要建表,不需要关心表的结构，可以动态增加键名，方便的完成数据存储)
