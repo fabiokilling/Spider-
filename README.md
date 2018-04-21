@@ -157,3 +157,6 @@ driver.get_screenshot_as_file(‘test.png‘)
 driver.close()
 
 不支持PhantomJs后处理方法的详情http://www.mamicode.com/info-detail-2193163.html
+
+## 储存（Python os.mkdir() 方法）
+
