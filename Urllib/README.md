@@ -132,3 +132,19 @@ try:
 except error.URLError as e:
     
     print(e.reason)
+    
+## URL解析
+
+### urlparse
+使用urlparse可以拆分解析URL
+
+from urllib.parse import urlparse
+
+
+result = urlparse('http://www.baidu.com/index.html;user?id=5#comment')
+
+print(type(result), result)
+
+运行结果
+
+<class 'urllib.parse.ParseResult'> ParseResult(scheme='http', netloc='www.baidu.com', path='/index.html', params='user', query='id=5', fragment='comment')
