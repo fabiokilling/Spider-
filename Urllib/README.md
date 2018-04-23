@@ -6,13 +6,13 @@
 
 相比Python2变化
 
-Python2
+### Python2
 
 import urllib2
 
 response = urllib2.urlopen('http://www.baidu.com')
 
-Python3
+### Python3
 
 import urllib.request
 
@@ -22,3 +22,5 @@ response = urllib.request.urlopen('http://www.baidu.com')
 ## urlopen
 urllib.request.urlopen(url,data=None,[timeout,]*,cafile=None,cadefault=False,context=None)
 
+
+# 'http://httpbin.org'  用来做http测试用网址
