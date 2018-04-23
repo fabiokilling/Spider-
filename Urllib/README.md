@@ -105,6 +105,8 @@ print(response.read().decode('utf-8'))
 
 # Cookie
 
+将Cookie储存为txt格式
+
 import http.cookiejar, urllib.request
 
 filename = "cookiejar.txt"
