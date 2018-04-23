@@ -102,3 +102,19 @@ print(response.read().decode('utf-8'))
 
 
 ## Request 还能使用.add_header('User-Agent','Mozilla/4.0(compatible;MSIE 5.5;Windows NT)')来添加headers
+
+# Cookie
+
+import http.cookiejar, urllib.request
+
+filename = "cookiejar.txt"
+
+cookie = http.cookiejar.MozillaCookieJar(filename)
+
+handler = urllib.request.HTTPCookieProcessor(cookie)
+
+opener = urllib.request.build_opener(handler)
+
+response = opener.open('http://www.baidu.com')
+
+cookie.save(ignore_discard=True,ignore_expires=True)
