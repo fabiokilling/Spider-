@@ -148,3 +148,12 @@ print(type(result), result)
 运行结果
 
 <class 'urllib.parse.ParseResult'> ParseResult(scheme='http', netloc='www.baidu.com', path='/index.html', params='user', query='id=5', fragment='comment')
+
+
+### urunparse
+拼接出URL
+
+### urljoin
+拼接URL，以后方为基准
+![Urljoin]
+
