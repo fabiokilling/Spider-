@@ -30,7 +30,7 @@ urllib.request.urlopen(url,data=None,[timeout,]*,cafile=None,cadefault=False,con
 request = request.Request(url = url,data = data,headers = headers, method = 'POST')
 
 
-from urllib import request.parse
+from urllib import request, parse
 
 
 url = 'http://httpbin.org/post'
@@ -43,6 +43,12 @@ headers = {
 
 }
 
+dict = {
+    
+    'name':'Germey'
+
+}
+
 data = bytes(parse.urlencode(dict),encoding='utf8')
 
 req = request.Request(url=url,data=data,headers=headers,method='POST')
@@ -50,3 +56,26 @@ req = request.Request(url=url,data=data,headers=headers,method='POST')
 response = request.urlopen(req)
 
 print(response.read().decode('utf-8'))
+
+
+### 运行结果
+
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "name": "Germey"
+  }, 
+  "headers": {
+    "Accept-Encoding": "identity", 
+    "Connection": "close", 
+    "Content-Length": "11", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Mozilla/4.0(compatible;MSIE 5.5;Windows NT)"
+  }, 
+  "json": null, 
+  "origin": "49.4.159.122", 
+  "url": "http://httpbin.org/post"
+}
