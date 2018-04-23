@@ -1,8 +1,8 @@
 # Python内置的HTTP请求库
-        ## urllib.request           请求模块
-        ## urllib.error             异常处理模块
-        ## urllib.parse             url解析模块
-        ## urllib.robotparser       robots.txt解析模块
+   ## urllib.request           请求模块
+   ## urllib.error             异常处理模块
+   ## urllib.parse             url解析模块
+   ## urllib.robotparser       robots.txt解析模块
 
 # 相比Python2变化
 
@@ -37,15 +37,15 @@ url = 'http://httpbin.org/post'
 
 headers = {
 
-        'User-Agent':'Mozilla/4.0(compatible;MSIE 5.5;Windows NT)',
+   'User-Agent':'Mozilla/4.0(compatible;MSIE 5.5;Windows NT)',
         
-        'Host':'httpbin.org'
+   'Host':'httpbin.org'
 
 }
 
 dict = {
     
-    'name':'Germey'
+   'name':'Germey'
 
 }
 
@@ -76,19 +76,19 @@ print(response.read().decode('utf-8'))
   
   "headers": {
     
-    "Accept-Encoding": "identity", 
+   "Accept-Encoding": "identity", 
     
-    "Connection": "close", 
+   "Connection": "close", 
     
-    "Content-Length": "11", 
+   "Content-Length": "11", 
+   
+   "Content-Type": "application/x-www-form-urlencoded", 
     
-    "Content-Type": "application/x-www-form-urlencoded", 
+   "Host": "httpbin.org", 
     
-    "Host": "httpbin.org", 
-    
-    "User-Agent": "Mozilla/4.0(compatible;MSIE 5.5;Windows NT)"
+   "User-Agent": "Mozilla/4.0(compatible;MSIE 5.5;Windows NT)"
   
-            },
+   },
  
   "json": null, 
   
@@ -160,6 +160,7 @@ print(type(result), result)
 
 ### urlencode
 把一个字典对象转换成get请求参数
+
 from urllib.parse import urlencode
 
 params = {
@@ -175,3 +176,11 @@ base_url = 'http://www.baidu.com?'
 url = base_url + urlencode(params)
 
 print(url)
+
+
+#### 运行结果
+http://www.baidu.com?name=germey&age=22
+
+
+# urllib.robotparser
+用来解析robot.txt
