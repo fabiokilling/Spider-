@@ -155,5 +155,5 @@ print(type(result), result)
 
 ### urljoin
 拼接URL，以后方为基准
-![Urljoin]
+![Urljoin](https://github.com/fabiokilling/Git/blob/master/Files/Urljoin.png)
 
