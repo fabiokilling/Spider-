@@ -61,21 +61,40 @@ print(response.read().decode('utf-8'))
 ### 运行结果
 
 {
+  
   "args": {}, 
+  
   "data": "", 
+  
   "files": {}, 
+  
   "form": {
-    "name": "Germey"
+  
+   "name": "Germey"
+  
   }, 
+  
   "headers": {
+    
     "Accept-Encoding": "identity", 
+    
     "Connection": "close", 
+    
     "Content-Length": "11", 
+    
     "Content-Type": "application/x-www-form-urlencoded", 
+    
     "Host": "httpbin.org", 
+    
     "User-Agent": "Mozilla/4.0(compatible;MSIE 5.5;Windows NT)"
-  }, 
+  
+  },
+ 
   "json": null, 
+  
   "origin": "49.4.159.122", 
+  
   "url": "http://httpbin.org/post"
+
 }
+
