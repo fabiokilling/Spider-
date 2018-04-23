@@ -158,3 +158,20 @@ print(type(result), result)
 
 ![Urljoin](https://github.com/fabiokilling/Git/blob/master/Files/Urljoin.png)
 
+### urlencode
+把一个字典对象转换成get请求参数
+from urllib.parse import urlencode
+
+params = {
+  
+  'name':'germey',
+
+  'age':22
+
+}
+
+base_url = 'http://www.baidu.com?'
+
+url = base_url + urlencode(params)
+
+print(url)
