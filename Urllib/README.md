@@ -120,3 +120,15 @@ opener = urllib.request.build_opener(handler)
 response = opener.open('http://www.baidu.com')
 
 cookie.save(ignore_discard=True,ignore_expires=True)
+
+## 异常处理
+
+from urllib import request, error
+
+try:
+
+    response = request.urlopen('http://cuiqingcai.com/index.htm')
+    
+except error.URLError as e:
+    
+    print(e.reason)
