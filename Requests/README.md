@@ -86,7 +86,7 @@ response = requests.get('http://www.taobao.com',timeout = 1)
 
 print(response.status_code)
 
-## 加上try:except让代码运行下去并捕获错误
+## 加上try:except让代码运行下去并捕获异常
 import requests
 
 from requests.exceptions import ReadTimeout
@@ -101,10 +101,7 @@ except ReadTimeout:
     
     print('Timeout')
 
-
-
 # 认证设置
-
 import requests
 
 from requests.auth import HTTPBasicAuth
@@ -113,10 +110,33 @@ r = requests.get('http://120.27.34.24:9001'.auth=HTTPBasicAuth('user','123'))
 
 print(r.status_code)
 
-
+## 以字典形式传入
 
 import requests
 
 r = requests.get('http://120.27.34.24:9001',auth=('user','123'))
 
 print(r.status_code)
+
+# 异常处理
+import requests
+
+from requests.exceptions import ReadTimeout,HttpError,RequestException
+
+try:
+    
+    response = requests.get('http://httpbin.org/get',timeout = 0.5)
+    
+    print(response.status_code)
+
+except ReadTimeout:
+    
+    print('Timeout')
+    
+except ConnectionError:
+    
+    print('Connection error')
+    
+except RequestException:
+
+    print('Error')
