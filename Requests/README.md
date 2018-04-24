@@ -51,7 +51,8 @@ print(response.status_code)
 import requests
 
 proxies = {
-    'http':'http://127.0.0.1:9743',
+    
+   'http':'http://127.0.0.1:9743',
     
    'http':'http://127.0.0.1:9743',
 
