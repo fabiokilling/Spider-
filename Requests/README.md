@@ -54,6 +54,7 @@ proxies = {
     'http':'http://127.0.0.1:9743',
     
    'http':'http://127.0.0.1:9743',
+
 }
 
 response = requests.get('http://www.taobao.com',proxies=proxies)
