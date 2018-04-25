@@ -18,7 +18,7 @@ import requests
 
 s = requests.Session()
 
-s.get('http://httpbin.rg/cookies/set/number/123456789')
+s.get('http://httpbin.org/cookies/set/number/123456789')
 
 response = s.get('http://httpbin.org/cookies')
 
