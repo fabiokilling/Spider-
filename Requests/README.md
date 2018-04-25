@@ -86,10 +86,10 @@ response = requests.get('http://www.taobao.com',timeout = 1)
 
 print(response.status_code)
 
-## 加上try:except让代码运行下去并捕获异常
+## 加上try:except:让代码运行下去并捕获异常
 import requests
 
-from requests.exceptions import ReadTimeout
+from requests.exceptions import ConnectTimeout
 
 try:
     
@@ -97,7 +97,7 @@ try:
     
     print(response.status_code)
     
-except ReadTimeout:
+except ConnectTimeout:
     
     print('Timeout')
 
