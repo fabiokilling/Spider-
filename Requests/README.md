@@ -121,7 +121,7 @@ print(r.status_code)
 # 异常处理
 import requests
 
-from requests.exceptions import ReadTimeout, HTTPError, RequestException
+from requests.exceptions import ReadTimeout, HTTPError, ConnectTimeout
 
 try:
     
@@ -129,7 +129,7 @@ try:
     
     print(response.status_code)
 
-except ReadTimeout:
+except ConnectTimeout:
     
     print('Timeout')
     
