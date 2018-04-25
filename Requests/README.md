@@ -121,7 +121,7 @@ print(r.status_code)
 # 异常处理
 import requests
 
-from requests.exceptions import ReadTimeout,HttpError,RequestException
+from requests.exceptions import ReadTimeout, HTTPError, RequestException
 
 try:
     
