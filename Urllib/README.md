@@ -62,44 +62,41 @@ print(response.read().decode('utf-8'))
 
 {
   
-  "args": {}, 
+  "args": {},
   
-  "data": "", 
+  "data": "",
   
-  "files": {}, 
+  "files": {},
   
   "form": {
+    
+    "name": "Germey"
   
-   "name": "Germey"
-  
-   }, 
+  },
   
   "headers": {
     
-   "Accept-Encoding": "identity", 
+    "Accept-Encoding": "identity",
     
-   "Connection": "close", 
+    "Connection": "close",
     
-   "Content-Length": "11", 
-   
-   "Content-Type": "application/x-www-form-urlencoded", 
+    "Content-Length": "11",
     
-   "Host": "httpbin.org", 
+    "Content-Type": "application/x-www-form-urlencoded",
     
-   "User-Agent": "Mozilla/4.0(compatible;MSIE 5.5;Windows NT)"
+    "Host": "httpbin.org",
+    
+    "User-Agent": "Mozilla/4.0(compatible;MSIE 5.5;Windows NT)"
   
-   },
- 
-  "json": null, 
+  },
   
-  "origin": "49.4.159.122", 
+  "json": null,
+  
+  "origin": "49.4.159.122",
   
   "url": "http://httpbin.org/post"
 
 }
-
-
-
 
 ## Request 还能使用.add_header('User-Agent','Mozilla/4.0(compatible;MSIE 5.5;Windows NT)')来添加headers
 
