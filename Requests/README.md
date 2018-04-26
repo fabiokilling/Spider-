@@ -54,9 +54,9 @@ proxies = {
     
    'http':'http://127.0.0.1:9743',
     
-   'http':'http://127.0.0.1:9743',
+   'https':'https://127.0.0.1:9743',
 
-}    #传入代理密码的方法 'http':'http://user:password@127.0.0.1:9743'
+}    #传入代理密码的方法 'http':'http://user:password@127.0.0.1:9743/',
 
 response = requests.get('http://www.taobao.com',proxies=proxies)
 
