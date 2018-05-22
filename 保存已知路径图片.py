@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 22 17:17:42 2018
-
-@author: bbtree
-"""
+#coding: utf-8
 import os
 import requests  
 os.makedirs('./png/', exist_ok=True)  
