@@ -1,0 +1,14 @@
+抓网页数据经常遇到例如&gt;或者&nbsp;这种HTML转义符，抓到字符串里很是烦人。
+
+比方说一个从网页中抓到的字符串
+
+html = '&lt;abc&gt;'
+用Python可以这样处理：
+
+import HTMLParser
+html_parser = HTMLParser.HTMLParser()
+txt = html_parser.unescape(html) #这样就得到了txt = '<abc>'
+如果还想转回去，可以这样：
+
+import cgi
+html = cgi.escape(txt) # 这样又回到了 html = '&lt;abc&gt'
