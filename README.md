@@ -167,4 +167,8 @@ https://www.json.cn/
 
 
  pic_url = element_data.xpath('//*[@id="endText"]//img[not(@class="icon")]/@src')
+
 #pic_url = [url for url in pic_url if url.find('css13/img') == -1]  #网易正文通用xpath取图片会取到最后一张会是网易的一个LOGO图片，此处为去最后一张图片
+
+text = html.unescape(text)
+去掉前端的类似amp;这种的东西
