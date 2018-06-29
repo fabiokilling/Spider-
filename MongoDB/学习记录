@@ -6,6 +6,7 @@ MongoDB中文社区
 
 http://www.mongoing.com/
 
+模糊查找MongoDB
 from pymongo import MongoClient
 client = MongoClient(host="localhost", port=27017)
 results= client.scrapy.content.find({'title':{'$regex':'推广'}})
@@ -13,3 +14,17 @@ for result in results:
     title = result.get('title','')
     url = result.get('source_url','')
     print(title,url)
+    
+
+写入数据
+client.scrapy.content.update_many({'origin_name':3},{'$set':{'praise_count':0}})
+
+删除指定标签
+client.scrapy.zhangbo.update_many({},{'$unset':{'title':''}})
+
+删除数据
+client.scrapy.zhangbo.delete_many({'origin_name':2})
+
+增加枚举关键字
+client.scrapy.zhangbo.update_many({},{'$set':{'title':''}})
+
