@@ -1,10 +1,15 @@
 MongoDB Windows系统各个64位版本下载地址：
 
-
-
 http://dl.mongodb.org/dl/win32/x86_64
-
 
 MongoDB中文社区
 
 http://www.mongoing.com/
+
+from pymongo import MongoClient
+client = MongoClient(host="localhost", port=27017)
+results= client.scrapy.content.find({'title':{'$regex':'推广'}})
+for result in results:
+    title = result.get('title','')
+    url = result.get('source_url','')
+    print(title,url)
