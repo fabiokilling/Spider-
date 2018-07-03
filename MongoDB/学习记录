@@ -32,4 +32,4 @@ client.scrapy.zhangbo.update_many({},{'$set':{'title':''}})
 mongodump -h 1xx.xx.xxx.xx:2xxxx -d scrapy -c 名称(可去) -o C:\data\db
 
 上传本地Bson,Json到MongoDB
-mongorestore.exe --host 127.0.0.1 --port 27017 -d scrapy C:\data\db
+mongorestore.exe --host 127.0.0.1 --port 27017 -d scrapy C:\data\db\scrapy
