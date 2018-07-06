@@ -172,3 +172,17 @@ https://www.json.cn/
 
 text = html.unescape(text)
 去掉前端的类似amp;这种的东西
+
+
+
+## 打开文件
+
+with open(r'C:\Users\x.log','r',encoding = 'utf-8') as f:
+    
+    a = f.read
+
+l = a.split('\n')
+
+L = [re.findall('title:(.*?),link',item) for item in l]
+
+titleList = [item for item in L if item != []]
