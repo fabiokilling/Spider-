@@ -33,3 +33,6 @@ mongodump -h 1xx.xx.xxx.xx:2xxxx -d scrapy -c 名称(可去) -o C:\data\db
 
 上传本地Bson,Json到MongoDB
 mongorestore.exe --host 127.0.0.1 --port 27017 -d scrapy C:\data\db\scrapy
+
+Python代码查询xx日期之后数据
+client.scrapy.xxxx.find({'origin_name':3,'crawl_time':{'$gte':datetime.datetime(2018,7,17)}}).count()
