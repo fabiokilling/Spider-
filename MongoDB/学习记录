@@ -36,3 +36,37 @@ mongorestore.exe --host 127.0.0.1 --port 27017 -d scrapy C:\data\db\scrapy
 
 Python代码查询xx日期之后数据
 client.scrapy.xxxx.find({'origin_name':3,'crawl_time':{'$gte':datetime.datetime(2018,7,17)}}).count()
+
+
+
+import pymongo
+import datetime
+import time
+time = time.localtime(time.time())
+a = time.tm_year
+b = time.tm_mon
+c = time.tm_mday
+class pymongo_cls():
+
+    def __init__(self):
+        #填入ip port,username,password
+        self.ip = 'dxx-xx.mongodb.rds.aliyuncs.com'
+        self.port = xxxx
+        self.username = 'xxx'
+        self.password = 'xxx'
+        self.client=pymongo.MongoClient(self.ip, self.port)
+
+        self.db=self.client.scrapy
+        self.db.authenticate(self.username, self.password)
+        self.collection = self.db.content
+        self.keywords =self.db.sensitive
+
+mongo_cls = pymongo_cls()
+
+print(f"总数: {mongo_cls.collection.count({})}")
+print(f"总日增: {mongo_cls.collection.count({'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
+print(f"xx日增: {mongo_cls.collection.count({'origin_name':1,'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
+print(f"xx日增: {mongo_cls.collection.count({'origin_name':2,'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
+print(f"xx日增: {mongo_cls.collection.count({'origin_name':3,'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
+print(f"xx日增: {mongo_cls.collection.count({'origin_name':4,'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
+
