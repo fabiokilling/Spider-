@@ -70,3 +70,10 @@ print(f"xx日增: {mongo_cls.collection.count({'origin_name':2,'crawl_time':{'$g
 print(f"xx日增: {mongo_cls.collection.count({'origin_name':3,'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
 print(f"xx日增: {mongo_cls.collection.count({'origin_name':4,'crawl_time':{'$gte':datetime.datetime(a,b,c)}})}")
 
+
+Mongo建立
+import pymongo
+client = pymongo.MongoClient(host = "xxx.xx.xxx.xx", port = xxxxx)
+collection= client.scrapy.collectionText
+#result=collection.ensure_index("title",unique=True)
+result=collection.ensure_index("origin_name")
