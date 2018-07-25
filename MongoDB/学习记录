@@ -80,3 +80,7 @@ result=collection.ensure_index("origin_name")
 
 Mongo查询增加游标，切分大小，防止处理不完数据造成超时
 client.scrapy.xxxxx.find({'origin_name':3}).batch_size(1000)
+
+MongoDB compass查询字段是否存在
+{origin_name:3,text_body:{$exists:true}}
+{origin_name:3,crawl_time:{$gte:(2018)}}    #存疑
