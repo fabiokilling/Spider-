@@ -84,3 +84,12 @@ client.scrapy.xxxxx.find({'origin_name':3}).batch_size(1000)
 MongoDB compass查询字段是否存在
 {origin_name:3,text_body:{$exists:true}}
 {origin_name:3,crawl_time:{$gte:(2018)}}    #存疑
+
+
+Mongo查询设置条数上限
+.limit(2000)
+
+
+Mongo文章
+https://blog.csdn.net/hzrandd/article/details/49003387
+
