@@ -98,3 +98,5 @@ https://www.jb51.net/article/78111.htm
 
 小技巧
 如果一个非常通用的查询，或者这个查询造成了性能瓶颈，那么在某字段（比如username）建立索引是非常好的选择。但只是给管理员用的查询（不太在意查询耗费时间），就不该对这个字段建立索引。
+
+update里有个参数 ‘$setOnInsert’ 可以实现”存在则不执行”的功能  https://docs.mongodb.com/manual/reference/operator/update/setOnInsert/
